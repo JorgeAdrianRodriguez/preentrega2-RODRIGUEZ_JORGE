@@ -14,6 +14,7 @@ function preguntarNombre() {
     let nombre;
     do {
         nombre = prompt("Ingrese su nombre");
+        console.log(nombre);
     } while ((nombre === null) || (nombre === "") || (!isNaN(nombre)));
     return nombre;
 }
@@ -22,6 +23,7 @@ function seleccionDeCamiseta(nombre) {
     let tipoCamiseta;
     do {
         tipoCamiseta = prompt("Hola " + nombre + " qué andás buscando hoy?(elegí el número deseado) \n1) Camisetas Clubes \n2) Camisetas Selecciones \n3) Camisetas Retro ");
+        console.log( "selecciono " + tipoCamiseta);
 
         if (isNaN(tipoCamiseta)) {
             alert("Ingresa una opcion valida (solo numeros)");
@@ -37,15 +39,15 @@ function seleccionDeCamiseta(nombre) {
 function camisetas(id) {
     switch (id) {
         case "1":
-            alert("Muy buena eleccion ");
+            alert("Muy buena eleccion, tenemos la mejor calidad en camisetas de Clubes");
             Clubes();
             break;
         case "2":
-            alert("Muy buena eleccion");
+            alert("Muy buena eleccion, tenemos gran variedad en camisetas de selecciones nacionales");
             Selecciones();
             break;
         case "3":
-            alert("Muy buena eleccion");
+            alert("Muy buena eleccion nada como una camiseta RETRO");
             Retro();
             break;
         default:
